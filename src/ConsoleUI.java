@@ -1,14 +1,13 @@
 import SortingAlgorithms.Algorithm;
+import java.util.Arrays;
 
 /**
  * Класс обработчик
  */
 public class ConsoleUI {
+
     private Algorithm algorithm;
 
-    public Algorithm getAlgorithm() {
-        return algorithm;
-    }
     public void setAlgorithm(Algorithm algorithm) {
         this.algorithm = algorithm;
     }
@@ -16,7 +15,10 @@ public class ConsoleUI {
     public void sorting(int[] array){
         algorithm.sorting(array);
     }
+
     public void print(int[] array){
-        algorithm.print(array);
+        String name = algorithm.getName();
+        System.out.print(name + ": ");
+        System.out.println(Arrays.toString(array));
     }
 }

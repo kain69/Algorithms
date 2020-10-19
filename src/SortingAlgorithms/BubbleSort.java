@@ -5,6 +5,10 @@ package SortingAlgorithms;
  */
 public class BubbleSort extends Algorithm {
 
+    public BubbleSort(){
+        super.setName("Пузырьковая сортировка");
+    }
+
     @Override
     public void sorting(int[] array) {
         boolean isSorted = false;
@@ -17,11 +21,5 @@ public class BubbleSort extends Algorithm {
                 }
             }
         }
-    }
-
-    @Override
-    public void print(int[] array) {
-        System.out.print("Пузырьковая сортировка: ");
-        super.print(array);
     }
 }

@@ -5,6 +5,10 @@ package SortingAlgorithms;
  */
 public class SelectionSort extends Algorithm {
 
+    public SelectionSort(){
+        super.setName("Сортировка выбором");
+    }
+
     @Override
     public void sorting(int[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -18,11 +22,5 @@ public class SelectionSort extends Algorithm {
             }
             swap(array, i, minId);
         }
-    }
-
-    @Override
-    public void print(int[] array) {
-        System.out.print("Сортировка выбором: ");
-        super.print(array);
     }
 }

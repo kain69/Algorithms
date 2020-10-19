@@ -5,6 +5,10 @@ package SortingAlgorithms;
  */
 public class QuickSort extends Algorithm {
 
+    public QuickSort(){
+        super.setName("Быстрая сортировка");
+    }
+
     @Override
     public void sorting(int[] array) {
         int begin = 0;
@@ -34,11 +38,5 @@ public class QuickSort extends Algorithm {
         array[end] = array[counter];
         array[counter] = temp;
         return counter;
-    }
-
-    @Override
-    public void print(int[] array) {
-        System.out.print("Быстрая сортировка: ");
-        super.print(array);
     }
 }

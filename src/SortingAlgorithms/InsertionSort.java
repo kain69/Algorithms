@@ -4,6 +4,11 @@ package SortingAlgorithms;
  * Класс сортировки вставками
  */
 public class InsertionSort extends Algorithm {
+
+    public InsertionSort(){
+        super.setName("Сортировка вставками");
+    }
+
     @Override
     public void sorting(int[] array) {
         for (int i = 1; i < array.length; i++) {
@@ -17,11 +22,5 @@ public class InsertionSort extends Algorithm {
             // или в первом элементе, где текущий >= a[j]
             array[j+1] = current;
         }
-    }
-
-    @Override
-    public void print(int[] array) {
-        System.out.print("Сортировка вставками: ");
-        super.print(array);
     }
 }

@@ -5,6 +5,10 @@ package SortingAlgorithms;
  */
 public class MergeSort extends Algorithm {
 
+    public MergeSort(){
+        super.setName("Сортировка слиянием");
+    }
+
     @Override
     public void sorting(int[] array) {
         int left = 0;
@@ -59,11 +63,5 @@ public class MergeSort extends Algorithm {
                 rightIndex++;
             }
         }
-    }
-
-    @Override
-    public void print(int[] array) {
-        System.out.print("Сортировка слиянием: ");
-        super.print(array);
     }
 }

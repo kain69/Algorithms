@@ -5,6 +5,10 @@ package SortingAlgorithms;
  */
 public class HeapSort extends Algorithm {
 
+    public HeapSort() {
+        super.setName("Пирамидальная сортировка");
+    }
+
     @Override
     public void sorting(int[] array) {
         if (array.length == 0) return;
@@ -21,7 +25,7 @@ public class HeapSort extends Algorithm {
         }
     }
 
-    public void heapify(int[] array, int length, int i) {
+    private void heapify(int[] array, int length, int i) {
         int leftChild = 2*i+1;
         int rightChild = 2*i+2;
         int largest = i;
@@ -40,11 +44,5 @@ public class HeapSort extends Algorithm {
             array[largest] = temp;
             heapify(array, length, largest);
         }
-    }
-
-    @Override
-    public void print(int[] array) {
-        System.out.print("Пирамидальная сортировка: ");
-        super.print(array);
     }
 }
